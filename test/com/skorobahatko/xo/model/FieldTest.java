@@ -14,7 +14,6 @@ public class FieldTest {
 		int expectedValue = 3;
 		final Field field = new Field();
 		int actualValue = field.getSize();
-		
 		assertEquals(expectedValue, actualValue);
 	}
 
@@ -23,10 +22,8 @@ public class FieldTest {
 		final Field field = new Field();
 		final Point inputPoint = new Point(0, 0);
 		final Figure inputFigure = Figure.X;
-		
 		field.setFigure(inputPoint, inputFigure);
 		final Figure actualFigure = field.getFigure(inputPoint);
-		
 		assertEquals(inputFigure, actualFigure);
 	}
 		
@@ -34,7 +31,6 @@ public class FieldTest {
 	public void testGetFigureWhenFigureIsNotSet() throws Exception {
 		final Field field = new Field();
 		final Point inputPoint = new Point(0, 0);
-		
 		final Figure actualFigure = field.getFigure(inputPoint);
 		assertNull(actualFigure);
 	}
@@ -66,10 +62,9 @@ public class FieldTest {
 	}
 	
 	@Test
-	public void testGetFigureWhenXIsMoreThanSize() throws Exception {
+	public void testGetFigureWhenYIsMoreThanSize() throws Exception {
 		final Field field = new Field();
-		final Point inputPoint = new Point(field.getSize() + 1, 0);
-		
+		final Point inputPoint = new Point(0, field.getSize() + 1);
 		try {
 			field.getFigure(inputPoint);
 			fail();
@@ -79,10 +74,9 @@ public class FieldTest {
 	}
 	
 	@Test
-	public void testGetFigureWhenYIsMoreThanSize() throws Exception {
+	public void testGetFigureWhenXIsMoreThanSize() throws Exception {
 		final Field field = new Field();
-		final Point inputPoint = new Point(0, field.getSize() + 1);
-		
+		final Point inputPoint = new Point(field.getSize() + 1, 0);
 		try {
 			field.getFigure(inputPoint);
 			fail();
@@ -95,7 +89,6 @@ public class FieldTest {
 	public void testGetFigureWhenBothCoordinatesLessThenZero() throws Exception {
 		final Field field = new Field();
 		final Point inputPoint = new Point(-1, -1);
-		
 		try {
 			field.getFigure(inputPoint);
 			fail();
@@ -108,7 +101,6 @@ public class FieldTest {
 	public void testGetFigureWhenBothCoordinatesMoreThenSize() throws Exception {
 		final Field field = new Field();
 		final Point inputPoint = new Point(field.getSize() + 1, field.getSize() + 1);
-		
 		try {
 			field.getFigure(inputPoint);
 			fail();
