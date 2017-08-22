@@ -4,9 +4,6 @@ import com.skorobahatko.xo.model.Field;
 import com.skorobahatko.xo.model.Figure;
 import com.skorobahatko.xo.model.Point;
 import com.skorobahatko.xo.model.exceptions.InvalidPointException;
-import com.sun.org.apache.regexp.internal.recompile;
-
-import sun.net.www.content.text.plain;
 
 public class WinnerController {
 
@@ -42,7 +39,7 @@ public class WinnerController {
 	
 	private boolean check(final Field field, 
 							final Point currentPoint, 
-							IPointGenerator pointGenerator) {
+							final IPointGenerator pointGenerator) {
 		Figure currentFigure;
 		Figure nextFigure;
 		Point nextPoint = pointGenerator.next(currentPoint);
