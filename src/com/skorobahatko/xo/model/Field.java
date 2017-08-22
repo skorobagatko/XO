@@ -27,19 +27,19 @@ public class Field {
 		if (!checkPoint(point)) {
 			throw new InvalidPointException();
 		}
-		return field[point.getX()][point.getY()];
+		return field[point.getY()][point.getX()];
 	}
 	
 	public void setFigure(final Point point, final Figure figure) throws InvalidPointException {
 		if (!checkPoint(point)) {
 			throw new InvalidPointException();
 		}
-		field[point.getX()][point.getY()] = figure;
+		field[point.getY()][point.getX()] = figure;
 	}
 	
 	private boolean checkPoint(final Point point) {
 		return checkCoordinate(point.getX(), field.length) && 
-				checkCoordinate(point.getY(), field[point.getX()].length);
+				checkCoordinate(point.getY(), field.length);
 	}
 	
 	private boolean checkCoordinate(final int coordinate, final int maxCoordinate) {
