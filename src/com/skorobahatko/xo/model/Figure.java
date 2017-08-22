@@ -1,5 +1,7 @@
 package com.skorobahatko.xo.model;
 
-public class Figure {
+public enum Figure {
+	
+	X, O;
 
 }

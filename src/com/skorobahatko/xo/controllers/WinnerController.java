@@ -33,7 +33,6 @@ public class WinnerController {
 		} catch (InvalidPointException e) {
 			e.printStackTrace();
 		}
-		
 		return null;
 	}
 	
