@@ -7,7 +7,7 @@ import com.skorobahatko.xo.model.exceptions.InvalidPointException;
 
 public class CurrentMoveController {
 	
-	public Figure currentMove(final Field field) {
+	public Figure currentMove(final Field<Figure> field) {
 		int figureCounter = countFiguresInTheField(field);
 				
 		// Check if field is full (no empty cells)
@@ -18,7 +18,7 @@ public class CurrentMoveController {
 		return (figureCounter % 2 == 0) ? Figure.X : Figure.O;
 	}
 	
-	private int countFiguresInTheField(final Field field) {
+	private int countFiguresInTheField(final Field<Figure> field) {
 		int figureCounter = 0; 
 		
 		final int fieldSize = field.getSize();

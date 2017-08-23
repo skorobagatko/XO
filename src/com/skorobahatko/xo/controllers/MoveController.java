@@ -8,7 +8,7 @@ import com.skorobahatko.xo.model.exceptions.InvalidPointException;
 
 public class MoveController {
 	
-	public void applyFigure(final Field field, 
+	public void applyFigure(final Field<Figure> field, 
 							final Figure figure, 
 							final Point point) throws InvalidPointException,
 													  AlreadyOccupiedException {

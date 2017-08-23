@@ -14,6 +14,7 @@ public class Field<T> {
 		this(3);
 	}
 
+	@SuppressWarnings("unchecked")
 	public Field(final int fieldSize) {
 		this.fieldSize = fieldSize;
 		field = (T[][]) new Object[fieldSize][fieldSize];

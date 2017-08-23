@@ -4,11 +4,11 @@ public class Game {
 	
 	private final String name;
 	
-	private final Field field;
+	private final Field<Figure> field;
 	
 	private final Player[] players;
 
-	public Game(final String name, final Field field, final Player[] players) {
+	public Game(final String name, final Field<Figure> field, final Player[] players) {
 		this.name = name;
 		this.field = field;
 		this.players = players;
@@ -18,7 +18,7 @@ public class Game {
 		return name;
 	}
 
-	public Field getField() {
+	public Field<Figure> getField() {
 		return field;
 	}
 

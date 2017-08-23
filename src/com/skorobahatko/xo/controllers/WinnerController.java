@@ -7,7 +7,7 @@ import com.skorobahatko.xo.model.exceptions.InvalidPointException;
 
 public class WinnerController {
 
-	public Figure getWinner(final Field field) {
+	public Figure getWinner(final Field<Figure> field) {
 		try {
 			for (int i = 0; i < 3; i++) {
 				Point point = new Point(i, 0);
@@ -36,7 +36,7 @@ public class WinnerController {
 		return null;
 	}
 	
-	private boolean check(final Field field, 
+	private boolean check(final Field<Figure> field, 
 							final Point currentPoint, 
 							final IPointGenerator pointGenerator) {
 		Figure currentFigure;
