@@ -2,11 +2,11 @@ package com.skorobahatko.xo.model;
 
 import com.skorobahatko.xo.model.exceptions.InvalidPointException;
 
-public class Field {
+public class Field<T> {
 	
 	private static final int MIN_COORDINATE = 0;
 	
-	private final Figure[][] field;
+	private final T[][] field;
 		
 	private final int fieldSize;
 			
@@ -16,21 +16,21 @@ public class Field {
 
 	public Field(final int fieldSize) {
 		this.fieldSize = fieldSize;
-		field = new Figure[fieldSize][fieldSize];
+		field = (T[][]) new Object[fieldSize][fieldSize];
 	}
 
 	public int getSize() {
 		return fieldSize;
 	}
 	
-	public Figure getFigure(final Point point) throws InvalidPointException {
+	public T getFigure(final Point point) throws InvalidPointException {
 		if (!checkPoint(point)) {
 			throw new InvalidPointException();
 		}
 		return field[point.getY()][point.getX()];
 	}
 	
-	public void setFigure(final Point point, final Figure figure) throws InvalidPointException {
+	public void setFigure(final Point point, final T figure) throws InvalidPointException {
 		if (!checkPoint(point)) {
 			throw new InvalidPointException();
 		}
