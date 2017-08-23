@@ -1,14 +1,14 @@
 package com.skorobahatko.xo.model;
 
-public class Game {
+public class Game<T> {
 	
 	private final String name;
 	
-	private final Field<Figure> field;
+	private final Field<T> field;
 	
 	private final Player[] players;
 
-	public Game(final String name, final Field<Figure> field, final Player[] players) {
+	public Game(final String name, final Field<T> field, final Player[] players) {
 		this.name = name;
 		this.field = field;
 		this.players = players;
@@ -18,7 +18,7 @@ public class Game {
 		return name;
 	}
 
-	public Field<Figure> getField() {
+	public Field<T> getField() {
 		return field;
 	}
 

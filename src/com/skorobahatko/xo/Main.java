@@ -16,7 +16,7 @@ public class Main {
 		
 		final Field<Figure> field = new Field<>(3);
 		
-		final Game game = new Game("XO", field, players);
+		final Game<Figure> game = new Game<>("XO", field, players);
 		
 		final ConsoleView consoleView = new ConsoleView();
 		
